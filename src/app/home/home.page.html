@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <div id="logo"><img src="assets/icon/truco.png" style="width: 100%; height: 100%; margin-left:0%; margin-top: 2%;"
+        alt=""></div>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  <ion-item lines="none">
+    <ion-input type="number" min="1"> {{pontosum}}</ion-input>
+  </ion-item>
+  <ion-item-group *ngFor="let equipe of _equipes">
+    <ion-item lines="none" class="equipe">{{equipe.getequipeum()}}</ion-item>
+  </ion-item-group>
+  <ion-item lines="none" class="itens">
+    <ion-button size="large" shape="square" (click)="mais_tres()">+ 3</ion-button>
+    <ion-button size="large" shape="square" (click)="menos_tres()">- 3</ion-button>
+    <ion-button size="large" shape="square" (click)="mais_um()">+ 1</ion-button>
+    <ion-button size="large" shape="square" (click)="menos_um()">- 1</ion-button>
+  </ion-item>
+  <ion-button class="zerar" size="large" shape="square" expand="block" (click)="zerarum()">Zerar</ion-button>
+</ion-content>
+
+
+
+
+<ion-content>
+  <ion-item lines="none">
+    <ion-input type="number" min="1">{{pontosdois}}</ion-input>
+  </ion-item>
+  <ion-item-group *ngFor="let equipe of _equipes">
+    <ion-item lines="none" class="equipe">{{equipe.getequipedois()}}</ion-item>
+  </ion-item-group>
+  <ion-item lines="none" class="itens">
+    <ion-button size="large" shape="square" (click)="maistres()">+ 3</ion-button>
+    <ion-button size="large" shape="square" (click)="menostres()">- 3</ion-button>
+    <ion-button size="large" shape="square" (click)="maisum()">+ 1</ion-button>
+    <ion-button size="large" shape="square" (click)="menosum()">- 1</ion-button>
+  </ion-item>
+  <ion-button class="zerar" size="large" shape="square" expand="block" (click)="zerardois()">Zerar</ion-button>
+</ion-content>
